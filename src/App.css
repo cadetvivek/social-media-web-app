@@ -1,0 +1,28 @@
+.App {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .post-form, .comment-form {
+    margin: 10px 0;
+  }
+  
+  .post-form input, .comment-form input {
+    margin-right: 10px;
+  }
+  
+  .post-list, .comment-list {
+    margin-top: 20px;
+  }
+  
+  .post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .post img {
+    max-width: 100%;
+    height: auto;
+  }
+  
