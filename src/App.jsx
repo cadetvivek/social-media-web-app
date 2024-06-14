@@ -4,17 +4,13 @@ import PostList from './components/PostList';
 import './App.css';
 
 const App = () => {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] =    useState(JSON.parse(localStorage.getItem('posts'))||[]);
 
+  
+
+  // Save posts to local storage whenever they change
   useEffect(() => {
-    const storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
-    setPosts(storedPosts);
-  }, []);
-
-  useEffect(() => {
-
     localStorage.setItem('posts', JSON.stringify(posts));
-    
   }, [posts]);
 
   const addPost = (post) => {
@@ -35,5 +31,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;
