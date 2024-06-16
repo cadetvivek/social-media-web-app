@@ -6,9 +6,6 @@ import './App.css';
 const App = () => {
   const [posts, setPosts] =    useState(JSON.parse(localStorage.getItem('posts'))||[]);
 
-  
-
-  // Save posts to local storage whenever they change
   useEffect(() => {
     localStorage.setItem('posts', JSON.stringify(posts));
   }, [posts]);
